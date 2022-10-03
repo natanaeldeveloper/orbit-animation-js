@@ -5,7 +5,7 @@
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
   "files": [
-    "build/src"
+    "build"
   ],
   "license": "Apache-2.0",
   "keywords": [],
@@ -14,6 +14,7 @@
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
+    "dev": "tsc -w",
     "fix": "gts fix",
     "prepare": "npm.cmd run compile && husky install",
     "pretest": "npm.cmd run compile",
