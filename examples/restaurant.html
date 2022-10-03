@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant</title>
+  <link rel="stylesheet" href="../build/src/styles.css">
+  <style>
+    .container {
+      width: 600px;
+      height: 600px;
+      border: 20px solid black;
+      border-radius: 100%;
+      /* transform: translate(-40%, -50%); */
+    }
+
+    .orbit_item {
+      width: 300px;
+      height: 300px;
+    }
+
+    .plate {
+      transition: .5s ease-in-out;
+    }
+
+    .plate img {
+      width: 250px;
+      border-radius: 50%;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="plate"><img src="https://www.istoedinheiro.com.br/wp-content/uploads/sites/17/2019/08/din1135-sustenta5.jpg"></div>
+      <div class="plate"><img src="https://st.depositphotos.com/1003814/4626/i/450/depositphotos_46267763-stock-photo-fried-chicken-fillets.jpg"></div>
+      <div class="plate"><img src="https://s1.1zoom.me/b5651/35/The_second_dishes_Meat_products_French_fries_522948_1366x768.jpg"></div>
+      <div class="plate"><img src="https://st2.depositphotos.com/4687049/6972/i/450/depositphotos_69724327-stock-photo-dish-with-meat-rice-and.jpg"></div>
+    </div>
+
+    <button id="prev">prev</button>
+    <button id="next">next</button>
+
+    <script type="module">
+      import Animation from '../build/src/animation.js';
+      const animation = Animation.create({
+        children: '.plate',
+        deg: 50,
+        // debug: true,
+        controls: {
+          prev: '#prev',
+          next: '#next',
+          event: 'click',
+        }
+      })
+
+      animation.init()
+
+    </script>
+</body>
+</html>
