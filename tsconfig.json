@@ -1,11 +1,15 @@
 {
   "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
+    "module": "ES6",
     "rootDir": ".",
-    "outDir": "build"
+    "outDir": "build",
+    "lib": [
+      "DOM"
+    ]
   },
   "include": [
     "src/**/*.ts",
     "test/**/*.ts"
-  ]
+  ],
 }
