@@ -1,0 +1,22 @@
+.container {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbit_item {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform-origin: left top;
+  transition: .5s ease-in-out;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transform: rotate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
